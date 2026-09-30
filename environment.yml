@@ -1,4 +1,4 @@
-name: cop3045-team5
+name: COP3045
 channels:
   - conda-forge
 dependencies:
