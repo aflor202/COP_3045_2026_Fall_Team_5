@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Operating-system files
+.DS_Store
+
+# Local configuration and environments
+.env
+.venv/
+
+# Python tooling caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# AWS SageMaker
+.sagemaker/
+
+# Generated project artifacts
+data/
+outputs/
+reports/
+
+# Keep the proposed project layout visible in Git
+!data/
+data/*
+!data/.gitkeep
+!outputs/
+outputs/*
+!outputs/.gitkeep
