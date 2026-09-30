@@ -1,0 +1,134 @@
+2026-09-30 01:18:39,933 - INFO - Processing file: C:\Users\aflor\FIU\COP3045 - Python II\COP_3045_2026_Fall_Team_5\00-Raw_Data\Batting.csv
+2026-09-30 01:18:40,124 - INFO - First 10 observations from Batting.csv:
+ playerID  yearID  stint teamID lgID   G  AB  R   H  2B  3B  HR  RBI  SB  CS  BB   SO  IBB  HBP  SH  SF  GIDP
+aardsda01    2004      1    SFN   NL  11   0  0   0   0   0   0  0.0 0.0 0.0   0  0.0  0.0  0.0 0.0 0.0   0.0
+aardsda01    2006      1    CHN   NL  45   2  0   0   0   0   0  0.0 0.0 0.0   0  0.0  0.0  0.0 1.0 0.0   0.0
+aardsda01    2007      1    CHA   AL  25   0  0   0   0   0   0  0.0 0.0 0.0   0  0.0  0.0  0.0 0.0 0.0   0.0
+aardsda01    2008      1    BOS   AL  47   1  0   0   0   0   0  0.0 0.0 0.0   0  1.0  0.0  0.0 0.0 0.0   0.0
+aardsda01    2009      1    SEA   AL  73   0  0   0   0   0   0  0.0 0.0 0.0   0  0.0  0.0  0.0 0.0 0.0   0.0
+aardsda01    2010      1    SEA   AL  53   0  0   0   0   0   0  0.0 0.0 0.0   0  0.0  0.0  0.0 0.0 0.0   0.0
+aardsda01    2012      1    NYA   AL   1   0  0   0   0   0   0  0.0 0.0 0.0   0  0.0  0.0  0.0 0.0 0.0   0.0
+aardsda01    2013      1    NYN   NL  43   0  0   0   0   0   0  0.0 0.0 0.0   0  0.0  0.0  0.0 0.0 0.0   0.0
+aardsda01    2015      1    ATL   NL  33   1  0   0   0   0   0  0.0 0.0 0.0   0  1.0  0.0  0.0 0.0 0.0   0.0
+aaronha01    1954      1    ML1   NL 122 468 58 131  27   6  13 69.0 2.0 2.0  28 39.0  NaN  3.0 6.0 4.0  13.0
+2026-09-30 01:18:40,124 - INFO - Columns in Batting.csv: ['playerID', 'yearID', 'stint', 'teamID', 'lgID', 'G', 'AB', 'R', 'H', '2B', '3B', 'HR', 'RBI', 'SB', 'CS', 'BB', 'SO', 'IBB', 'HBP', 'SH', 'SF', 'GIDP']
+2026-09-30 01:18:40,130 - INFO - Removed 90722 records from Batting.csv during year filtering (0 invalid/unparseable years).
+2026-09-30 01:18:40,145 - INFO - Duplicate rows before removal in Batting.csv: 0
+2026-09-30 01:18:40,175 - INFO - IQR outliers detected in Batting.csv (retained): {'G': 1217, 'AB': 4306, 'R': 5044, 'H': 4903, '2B': 5117, 'HR': 6210, 'RBI': 5085, 'SB': 6335, 'BB': 4632, 'SO': 3443, 'HBP': 6183, 'SH': 4198, 'SF': 5126, 'GIDP': 4820}
+2026-09-30 01:18:40,176 - INFO - Filtered dimensions for Batting.csv: 37876 rows x 22 columns.
+2026-09-30 01:18:40,179 - INFO - First 5 filtered rows from Batting.csv:
+ playerID  yearID  stint teamID lgID  G  AB  R  H  2B  3B  HR  RBI  SB  CS  BB  SO  IBB  HBP  SH  SF  GIDP
+aardsda01    2004      1    SFN   NL 11   0  0  0   0   0   0  0.0 0.0 0.0   0 0.0  0.0  0.0 0.0 0.0   0.0
+aardsda01    2006      1    CHN   NL 45   2  0  0   0   0   0  0.0 0.0 0.0   0 0.0  0.0  0.0 1.0 0.0   0.0
+aardsda01    2007      1    CHA   AL 25   0  0  0   0   0   0  0.0 0.0 0.0   0 0.0  0.0  0.0 0.0 0.0   0.0
+aardsda01    2008      1    BOS   AL 47   1  0  0   0   0   0  0.0 0.0 0.0   0 1.0  0.0  0.0 0.0 0.0   0.0
+aardsda01    2009      1    SEA   AL 73   0  0  0   0   0   0  0.0 0.0 0.0   0 0.0  0.0  0.0 0.0 0.0   0.0
+2026-09-30 01:18:40,182 - INFO - Missing values by column for Batting.csv:
+playerID    0
+yearID      0
+stint       0
+teamID      0
+lgID        0
+G           0
+AB          0
+R           0
+H           0
+2B          0
+3B          0
+HR          0
+RBI         0
+SB          0
+CS          0
+BB          0
+SO          0
+IBB         0
+HBP         0
+SH          0
+SF          0
+GIDP        0
+2026-09-30 01:18:40,184 - INFO - Processing file: C:\Users\aflor\FIU\COP3045 - Python II\COP_3045_2026_Fall_Team_5\00-Raw_Data\Fielding.csv
+2026-09-30 01:18:40,422 - INFO - First 10 observations from Fielding.csv:
+ playerID  yearID  stint teamID lgID POS   G    GS  InnOuts    PO   A   E  DP  PB  WP  SB  CS  ZR
+aardsda01    2004      1    SFN   NL   P  11   0.0     32.0   0.0 0.0 0.0 0.0 NaN NaN NaN NaN NaN
+aardsda01    2006      1    CHN   NL   P  45   0.0    159.0   1.0 5.0 0.0 1.0 NaN NaN NaN NaN NaN
+aardsda01    2007      1    CHA   AL   P  25   0.0     97.0   2.0 4.0 1.0 0.0 NaN NaN NaN NaN NaN
+aardsda01    2008      1    BOS   AL   P  47   0.0    146.0   3.0 6.0 0.0 0.0 NaN NaN NaN NaN NaN
+aardsda01    2009      1    SEA   AL   P  73   0.0    214.0   2.0 5.0 0.0 1.0 NaN NaN NaN NaN NaN
+aardsda01    2010      1    SEA   AL   P  53   0.0    149.0   2.0 3.0 1.0 0.0 NaN NaN NaN NaN NaN
+aardsda01    2012      1    NYA   AL   P   1   0.0      3.0   0.0 0.0 0.0 0.0 NaN NaN NaN NaN NaN
+aardsda01    2013      1    NYN   NL   P  43   0.0    119.0   1.0 5.0 0.0 0.0 NaN NaN NaN NaN NaN
+aardsda01    2015      1    ATL   NL   P  33   0.0     92.0   0.0 1.0 1.0 0.0 NaN NaN NaN NaN NaN
+aaronha01    1954      1    ML1   NL  OF 116 113.0   3093.0 223.0 5.0 7.0 0.0 NaN NaN NaN NaN NaN
+2026-09-30 01:18:40,423 - INFO - Columns in Fielding.csv: ['playerID', 'yearID', 'stint', 'teamID', 'lgID', 'POS', 'G', 'GS', 'InnOuts', 'PO', 'A', 'E', 'DP', 'PB', 'WP', 'SB', 'CS', 'ZR']
+2026-09-30 01:18:40,431 - INFO - Removed 124917 records from Fielding.csv during year filtering (0 invalid/unparseable years).
+2026-09-30 01:18:40,451 - INFO - Duplicate rows before removal in Fielding.csv: 0
+2026-09-30 01:18:40,481 - INFO - IQR outliers detected in Fielding.csv (retained): {'G': 3835, 'GS': 5708, 'InnOuts': 6916, 'PO': 7932, 'A': 6444, 'E': 3698, 'DP': 7917, 'PB': 64, 'WP': 4, 'SB': 48, 'CS': 64}
+2026-09-30 01:18:40,481 - INFO - Filtered dimensions for Fielding.csv: 49415 rows x 18 columns.
+2026-09-30 01:18:40,484 - INFO - First 5 filtered rows from Fielding.csv:
+ playerID  yearID  stint teamID lgID POS  G  GS  InnOuts  PO   A   E  DP  PB  WP  SB  CS  ZR
+aardsda01    2004      1    SFN   NL   P 11 0.0     32.0 0.0 0.0 0.0 0.0 NaN NaN NaN NaN NaN
+aardsda01    2006      1    CHN   NL   P 45 0.0    159.0 1.0 5.0 0.0 1.0 NaN NaN NaN NaN NaN
+aardsda01    2007      1    CHA   AL   P 25 0.0     97.0 2.0 4.0 1.0 0.0 NaN NaN NaN NaN NaN
+aardsda01    2008      1    BOS   AL   P 47 0.0    146.0 3.0 6.0 0.0 0.0 NaN NaN NaN NaN NaN
+aardsda01    2009      1    SEA   AL   P 73 0.0    214.0 2.0 5.0 0.0 1.0 NaN NaN NaN NaN NaN
+2026-09-30 01:18:40,489 - INFO - Missing values by column for Fielding.csv:
+playerID        0
+yearID          0
+stint           0
+teamID          0
+lgID            0
+POS             0
+G               0
+GS              3
+InnOuts         3
+PO              0
+A               0
+E               0
+DP              0
+PB          46389
+WP          49076
+SB          46389
+CS          46389
+ZR          49415
+2026-09-30 01:18:40,492 - INFO - Processing file: C:\Users\aflor\FIU\COP3045 - Python II\COP_3045_2026_Fall_Team_5\00-Raw_Data\Salaries.csv
+2026-09-30 01:18:40,512 - INFO - First 10 observations from Salaries.csv:
+ yearID teamID lgID  playerID  salary
+   2004    SFN   NL aardsda01  300000
+   2007    CHA   AL aardsda01  387500
+   2008    BOS   AL aardsda01  403250
+   2009    SEA   AL aardsda01  419000
+   2010    SEA   AL aardsda01 2750000
+   2011    SEA   AL aardsda01 4500000
+   2012    NYA   AL aardsda01  500000
+   1986    BAL   AL  aasedo01  600000
+   1987    BAL   AL  aasedo01  625000
+   1988    BAL   AL  aasedo01  675000
+2026-09-30 01:18:40,513 - INFO - Columns in Salaries.csv: ['yearID', 'teamID', 'lgID', 'playerID', 'salary']
+2026-09-30 01:18:40,515 - INFO - Removed 12263 records from Salaries.csv during year filtering (0 invalid/unparseable years).
+2026-09-30 01:18:40,517 - INFO - Duplicate rows before removal in Salaries.csv: 0
+2026-09-30 01:18:40,521 - INFO - IQR outliers detected in Salaries.csv (retained): {'salary': 1316}
+2026-09-30 01:18:40,521 - INFO - Filtered dimensions for Salaries.csv: 14165 rows x 5 columns.
+2026-09-30 01:18:40,522 - INFO - First 5 filtered rows from Salaries.csv:
+ yearID teamID lgID  playerID  salary
+   2004    SFN   NL aardsda01  300000
+   2007    CHA   AL aardsda01  387500
+   2008    BOS   AL aardsda01  403250
+   2009    SEA   AL aardsda01  419000
+   2010    SEA   AL aardsda01 2750000
+2026-09-30 01:18:40,524 - INFO - Missing values by column for Salaries.csv:
+yearID      0
+teamID      0
+lgID        0
+playerID    0
+salary      0
+2026-09-30 01:18:40,524 - INFO - Columns shared by all input files: ['lgID', 'playerID', 'teamID', 'yearID']
+2026-09-30 01:18:40,525 - INFO - Using composite join key: ['playerID', 'yearID', 'teamID', 'lgID']
+2026-09-30 01:18:40,531 - INFO - Duplicate composite-key rows in Batting.csv: 23
+2026-09-30 01:18:40,540 - INFO - Duplicate composite-key rows in Fielding.csv: 11835
+2026-09-30 01:18:40,583 - INFO - Merge with Fielding.csv produced 49755 rows x 36 columns; unmatched records: {'both': 49482, 'left_only': 273, 'right_only': 0}
+2026-09-30 01:18:40,587 - INFO - Duplicate composite-key rows in Salaries.csv: 0
+2026-09-30 01:18:40,620 - INFO - Merge with Salaries.csv produced 50272 rows x 37 columns; unmatched records: {'left_only': 31623, 'both': 18132, 'right_only': 517}
+2026-09-30 01:18:40,621 - INFO - Removed 31623 observations without salary data.
+2026-09-30 01:18:40,797 - INFO - Final output path: C:\Users\aflor\FIU\COP3045 - Python II\COP_3045_2026_Fall_Team_5\01-Data_Preparation\Attempt_#2\consolidated_data_v2.csv
+2026-09-30 01:18:40,798 - INFO - Final consolidated dimensions: 18649 rows x 37 columns.
+
