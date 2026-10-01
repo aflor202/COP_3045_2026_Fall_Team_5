@@ -25,6 +25,11 @@ The script:
 - Writes `consolidated_data_v2.csv`.
 - Logs processing details, dimensions, filtering results, and merge diagnostics.
 
+AI Assistance Disclosure
+GitHub Copilot was used to assist with drafting, structuring, and refining portions of the data-preparation script and this documentation.
+
+The project author, Andres Flores, reviewed the generated content, selected the data-cleaning and merging approach, verified the project requirements, and remains responsible for the final implementation and results.
+
 ## Input Data
 
 Required files:
@@ -35,7 +40,3 @@ Required files:
 ├── Fielding.csv
 └── Salaries.csv
 
-AI Assistance Disclosure
-GitHub Copilot was used to assist with drafting, structuring, and refining portions of the data-preparation script and this documentation.
-
-The project author, Andres Flores, reviewed the generated content, selected the data-cleaning and merging approach, verified the project requirements, and remains responsible for the final implementation and results.
