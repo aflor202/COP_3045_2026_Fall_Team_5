@@ -68,3 +68,34 @@ for column in ("teamID", "lgID", "POS"):
         )
         print(f"\nSummary by {column}:")
         print(category_summary.sort_values("record_count", ascending=False))
+
+
+# Check repeated player/team/season records.
+keys = ["playerID", "yearID", "teamID"]
+
+group_sizes = df.groupby(keys).size()
+
+print("\nPlayer/team/season groups with multiple rows:")
+print((group_sizes > 1).sum())
+
+# Check whether those groups contain conflicting salary values.
+salary_counts = df.groupby(keys)["salary"].nunique()
+
+print("\nGroups with more than one distinct salary:")
+print((salary_counts > 1).sum())
+
+# Display one repeated group to inspect its positions and stints.
+repeated_groups = group_sizes[group_sizes > 1]
+
+if not repeated_groups.empty:
+    example_key = repeated_groups.index[0]
+    mask = (
+        df["playerID"].eq(example_key[0])
+        & df["yearID"].eq(example_key[1])
+        & df["teamID"].eq(example_key[2])
+    )
+
+    columns = keys + ["POS", "stint_left", "stint_right", "salary"]
+
+    print("\nExample repeated group:")
+    print(df.loc[mask, columns].to_string(index=False))
