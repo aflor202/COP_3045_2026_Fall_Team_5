@@ -1,12 +1,18 @@
 # Python
 __pycache__/
 *.py[cod]
+*.pyc
 
 # Jupyter
 .ipynb_checkpoints/
 
 # Operating-system files
 .DS_Store
+
+# IDE & local editor settings
+.idea/
+.vscode/
+*.iml
 
 # Local configuration and environments
 .env
@@ -32,7 +38,5 @@ data/*
 !outputs/
 outputs/*
 !outputs/.gitkeep
-
-OOP_Workflow/OOP-Outputs/
 
 OOP_Workflow/OOP-Outputs/
