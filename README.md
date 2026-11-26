@@ -11,7 +11,7 @@ An object-oriented Python data analysis and automated PDF reporting pipeline for
 The refactored application follows a **Central Pipeline Facade** pattern with strict one-way dependencies:
 
 ```text
-main.py  (CLI / argparse / logging / Agg backend)
+OOP_Workflow/main.py  (CLI / argparse / logging / Agg backend)
    │
    ▼
 OOP_Workflow/pipeline.py  (PipelineConfig, PipelineResult, AnalysisPipeline)
@@ -30,7 +30,7 @@ OOP_Workflow/Classes/*  (Domain & stage components)
 | **Data Preparation, Storage & Cleaning** | Load & outer-merge raw CSVs (`yearID >= 2000`), SQLite roundtrip, deduplication, whitespace trimming, numeric coercion | `OOP_Workflow/Classes/data_preparer.py`, `OOP_Workflow/Classes/preparation/collection.py`, `OOP_Workflow/Classes/baseball_database.py`, `OOP_Workflow/Classes/data_cleaner.py` |
 | **Exploratory Data Analysis** | Input validation, descriptive statistics, missingness, batting-salary Pearson correlations, league/team/top-player summaries | `OOP_Workflow/Classes/data_analyzer.py`, `OOP_Workflow/Classes/eda/validation.py`, `OOP_Workflow/Classes/eda/non_graphical.py`, `OOP_Workflow/Classes/eda/salary_analysis.py` |
 | **Visualizations & PDF Reporting** | Headless PNG generation (generic EDA + 5 baseball salary charts) and ReportLab PDF compilation | `OOP_Workflow/Classes/eda/graphical.py`, `OOP_Workflow/Classes/eda/salary_graphs.py`, `OOP_Workflow/Classes/pdf_report.py` |
-| **OOP Orchestration, CLI, Env & QA** | `PipelineConfig` / `AnalysisPipeline` facade, `argparse` CLI, reproducible `environment.yml`, and `pytest` suite | `OOP_Workflow/pipeline.py`, `main.py`, `OOP_Workflow/main.py`, `environment.yml`, `pytest.ini`, `tests/conftest.py`, `tests/test_pipeline.py` |
+| **OOP Orchestration, CLI, Env & QA** | `PipelineConfig` / `AnalysisPipeline` facade, `argparse` CLI, reproducible `environment.yml`, and `pytest` suite | `OOP_Workflow/pipeline.py`, `OOP_Workflow/main.py`, `environment.yml`, `pytest.ini`, `tests/conftest.py`, `tests/test_pipeline.py` |
 
 ---
 
@@ -38,13 +38,12 @@ OOP_Workflow/Classes/*  (Domain & stage components)
 
 ```text
 COP_3045_2026_Fall_Team_5/
-├── main.py                              # Root CLI entry point
 ├── environment.yml                      # Reproducible Conda environment (COP3045)
 ├── pytest.ini                           # Pytest discovery & pythonpath configuration
 ├── README.md
 ├── OOP_Workflow/
 │   ├── __init__.py
-│   ├── main.py                          # Thin module delegate (python -m OOP_Workflow.main)
+│   ├── main.py                          # CLI entry point
 │   ├── pipeline.py                      # PipelineConfig, PipelineResult, AnalysisPipeline
 │   └── Classes/
 │       ├── __init__.py
@@ -87,11 +86,13 @@ conda env update -n COP3045 -f environment.yml --prune
 
 ## Usage (CLI & Module Entry Point)
 
-Run the full pipeline using either the root CLI or the module delegate:
+Run the full pipeline from inside `OOP_Workflow/`, from the repository root, or as a Python module:
 
 ```bash
+cd OOP_Workflow
 python main.py
-# or
+# or from the repository root:
+python OOP_Workflow/main.py
 python -m OOP_Workflow.main
 ```
 
@@ -107,7 +108,7 @@ python -m OOP_Workflow.main
 Example with custom paths and logging:
 
 ```bash
-python main.py --raw-data-dir my_modules/00-Raw_Data --output-dir OOP_Workflow/OOP-Outputs --report-filename baseball_report.pdf --log-level DEBUG
+python OOP_Workflow/main.py --raw-data-dir my_modules/00-Raw_Data --output-dir OOP_Workflow/OOP-Outputs --report-filename baseball_report.pdf --log-level DEBUG
 ```
 
 ### Generated Output Artifacts

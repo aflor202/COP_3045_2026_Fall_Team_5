@@ -9,7 +9,9 @@ _START_DIR = (
     Path(__file__).resolve().parent if "__file__" in globals() else Path.cwd().resolve()
 )
 for _candidate in (_START_DIR, *_START_DIR.parents):
-    if (_candidate / "main.py").is_file() and (_candidate / "OOP_Workflow").is_dir():
+    if (_candidate / "OOP_Workflow" / "main.py").is_file() and (
+        _candidate / "OOP_Workflow"
+    ).is_dir():
         if str(_candidate) not in sys.path:
             sys.path.insert(0, str(_candidate))
         break
